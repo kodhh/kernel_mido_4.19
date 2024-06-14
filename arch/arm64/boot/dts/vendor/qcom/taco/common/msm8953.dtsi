@@ -73,19 +73,19 @@
 		modem_mem: modem_region@0 {
 			compatible = "removed-dma-pool";
 			no-map;
-			reg = <0x0 0x86c00000 0x0 0x6a00000>;
+			reg = <0x0 0x86c00000 0x0 0x6000000>;
 		};
 
 		adsp_fw_mem: adsp_fw_region@0 {
 			compatible = "removed-dma-pool";
 			no-map;
-			reg = <0x0 0x8d600000 0x0 0x1100000>;
+			reg = <0x0 0x8cc00000 0x0 0x1800000>;
 		};
 
 		wcnss_fw_mem: wcnss_fw_region@0 {
 			compatible = "removed-dma-pool";
 			no-map;
-			reg = <0x0 0x8e700000 0x0 0x700000>;
+			reg = <0x0 0x8e400000 0x0 0x1000000>;
 		};
 
 		venus_mem: venus_region@0 {
@@ -448,6 +448,7 @@
 		qcom,msm-bus,num-cases = <4>;
 		qcom,msm-bus,num-paths = <1>;
 		qcom,support-bus-scaling;
+		qcom,appsbl-qseecom-support;
 		qcom,msm-bus,vectors-KBps =
 			<55 512 0 0>,
 			<55 512 0 0>,
@@ -1413,9 +1414,9 @@
 			reg = <0x10 8>;
 		};
 
-		dload_type@1c {
+		dload_type@18 {
 			compatible = "qcom,msm-imem-dload-type";
-			reg = <0x1c 4>;
+			reg = <0x18 4>;
 		};
 
 		restart_reason@65c {
@@ -1890,7 +1891,7 @@
 		qcom,qusb-phy-init-seq = <0xf8 0x80
 					0xb3 0x84
 					0x83 0x88
-					0xc0 0x8c
+					0xcd 0x8c
 					0x14 0x9c
 					0x30 0x08
 					0x79 0x0c
