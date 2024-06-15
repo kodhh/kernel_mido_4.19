@@ -32,7 +32,6 @@
 #include <linux/proc_fs.h>
 #include <linux/fs.h>
 #include <linux/uaccess.h>
-#include <asm/uaccess.h>
 
 #if WT_CTP_GESTURE_SUPPORT
 #define FTS_GESTRUE_POINTS 				255

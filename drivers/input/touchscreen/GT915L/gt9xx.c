@@ -230,7 +230,6 @@ static ssize_t gt9xx_mido_gtp_glove_onoff_store(struct device *dev,
 				const char *buf, size_t size)
 {
 	struct goodix_ts_data *ts = NULL;
-	unsigned long val = 0;
 
 	ts = dev_get_drvdata(dev);
 
