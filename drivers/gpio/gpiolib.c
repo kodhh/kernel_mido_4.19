@@ -2691,14 +2691,12 @@ int gpiod_direction_output(struct gpio_desc *desc, int value)
 	if (special_irq && gt9xx_flag)
 		pr_debug("[GPIO]set GPIO_65 as irq output\n");
 	else {
-#endif
 		if (test_bit(FLAG_USED_AS_IRQ, &desc->flags)) {
 			gpiod_err(desc,
 				 "%s: tried to set a GPIO tied to an IRQ as output\n",
 				 __func__);
 			return -EIO;
 		}
-#ifdef CONFIG_TOUCHSCREEN_GT9XX_v24
 	}
 #endif
 
